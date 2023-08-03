@@ -1,5 +1,6 @@
+#solving google practices for finding end matches strings in list of the strings and count how much of them are more than of
+#two alphabet
 def match_ends(words):
-  # +++your code here+++
   count = 0
   for s in words :
     if s[0]==s[-1]:

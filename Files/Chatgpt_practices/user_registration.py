@@ -1,3 +1,4 @@
+#writing a program for getting data from user like name email and password for regidteration
 from flask import Flask, jsonify, request
 import json
 
