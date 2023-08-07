@@ -5,7 +5,6 @@
 # You can only have the string once in your code.
 # Don't just copy/paste it 5 times into a single variable!
 
-
 def show_excitement():
     # Your code goes here!
     return 5*"I am super excited for this course! " # in python we can multiple a string and i do that for having that 5 times :)

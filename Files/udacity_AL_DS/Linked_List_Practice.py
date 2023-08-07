@@ -5,14 +5,14 @@ class Element(object):
 
 class LinkedList(object):
     def __init__(self, head=None):
-        self.head = head
+        self.head = head                # create head varriable to find nodes position and modify them 
 
-    def append(self, new_element):
-        current = self.head
+    def append(self, new_element):      
+        current = self.head             # we make a varriable and do it equal to head for better handeling the position of nodes
         if self.head:
-            while current.next:
-                current = current.next
-            current.next = new_element
+            while current.next:         # create a always true loop for execute the function  
+                current = current.next  # going to the next node with .next method
+            current.next = new_element  # make equal new and current elements for replacing current with new  
         else:
             self.head = new_element
 
@@ -21,10 +21,10 @@ class LinkedList(object):
         Assume the first position is "1".
         Return "None" if position is not in the list."""
         current = self.head
-        count = 1
-        while current and count < position:
-            current = current.next
-            count += 1
+        count = 1                           # make a counter for indexing and using in conditions
+        while current and count < position: #comparing to count and current node to find position  
+            current = current.next      
+            count += 1                      # when function get this node plus one to know how much it get
 
         if current:
             return current
@@ -36,13 +36,13 @@ class LinkedList(object):
         Assume the first position is "1".
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
-        if position == 1:
-            new_element.next = self.head
+        if position == 1:                          #first position
+            new_element.next = self.head           #head is going forward in place of next element for inserting the newelement 
             self.head = new_element
         else:
-            prev = self.get_position(position - 1)
+            prev = self.get_position(position - 1) # using get position class to find previous position --> position - 1 
             if prev:
-                new_element.next = prev.next
+                new_element.next = prev.next       # inserting new element
                 prev.next = new_element
 
     def delete(self, value):
@@ -51,13 +51,13 @@ class LinkedList(object):
         prev = None
 
         while current:
-            if current.value == value:
+            if current.value == value:       
                 if prev:
                     prev.next = current.next
                 else:
                     self.head = current.next
                 break
-            prev = current
+            prev = current         # making equal to none for deleting 
             current = current.next
 
 # Test cases

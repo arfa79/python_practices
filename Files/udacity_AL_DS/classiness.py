@@ -1,17 +1,17 @@
 class Classy(object):
     def __init__(self):
-        self.items = []
+        self.items = []           #create a list for adding items 
 
     def addItem(self, item):
-        self.items.append(item)
+        self.items.append(item)   # add item to items list 
 
     def getClassiness(self):
-        classiness_points = {
+        classiness_points = {     #add points to calculate them when getclassiness is called by somthing
             "tophat": 2,
             "bowtie": 4,
             "monocle": 5
         }
-        total_classiness = sum(classiness_points.get(item, 0) for item in self.items)
+        total_classiness = sum(classiness_points.get(item, 0) for item in self.items) # calculate the total points with sum method
         return total_classiness
 
 # Test cases
