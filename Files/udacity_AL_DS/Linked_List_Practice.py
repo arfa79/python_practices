@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Element(object):
     def __init__(self, value):
         self.value = value
@@ -92,7 +91,6 @@ print(ll.get_position(1).value)
 print(ll.get_position(2).value)
 # Should print 3 now
 print(ll.get_position(3).value)
-=======
 class Element(object):
     def __init__(self, value):
         self.value = value
@@ -186,4 +184,3 @@ print(ll.get_position(1).value)
 print(ll.get_position(2).value)
 # Should print 3 now
 print(ll.get_position(3).value)
->>>>>>> 7e73418abf2b1142fe39f38c5b2a0f6626261581
